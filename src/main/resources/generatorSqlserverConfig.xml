@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!--数据库连接 -->
+	<context id="ctx">
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Query" />
+		</plugin>
+
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<!-- <plugin type="com.huato.mybatis.plugins.MySQLLimitPlugin"></plugin> -->
+		<!-- <plugin type="com.huato.mybatis.plugins.InsertAndUpdateBatch"></plugin> -->
+		<plugin type="com.huato.mybatis.plugins.PaginationPlugin">
+			<property name="pageQualifiedName" value="com.huato.util.page.PageBean" />
+			<property name="beginPageIndex" value="beginPageIndex" />
+			<property name="endPageIndex" value="endPageIndex" />
+		</plugin>
+
+
+		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+			connectionURL="jdbc:sqlserver://139.224.221.108:1433;DatabaseName=DB_Wechat"
+			userId="sa" password="Huato2008" />
+
+		<!-- targetProject:自动生成代码的位置 -->
+		<javaModelGenerator targetPackage="com.huato.entity"
+			targetProject="G:\h\src">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- targetPackage:mapper映射文件生成的位置 -->
+		<sqlMapGenerator targetPackage="com.huato.mapper"
+			targetProject="G:\h\src">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- targetPackage：mapper接口的生成位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.huato.mapper" targetProject="G:\h\src">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!--tableName是表名 domainObjectName是领域对象名 -->
+		<!-- <table schema="" tableName="T_AlarmAdmin" domainObjectName="AlarmAdmin" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="true" selectByExampleQueryId="true"> <generatedKey 
+			column="aid" sqlStatement="SQLServer" identity="true" /> </table> -->
+
+		<table schema="" tableName="T_ErrorLog" domainObjectName="ErrorLog">
+			<generatedKey column="id" sqlStatement="SQLServer" identity="true" />
+
+		</table>
+
+
+
+
+
+	</context>
+
+</generatorConfiguration>

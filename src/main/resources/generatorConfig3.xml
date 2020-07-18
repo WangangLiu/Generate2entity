@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!--数据库连接 -->
+	<context id="context1">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/db_blog" userId="root"
+			password="123456" />
+		<!--配置自动生成代码的位置 -->
+		<javaModelGenerator
+			targetPackage="org.dengyu.blog.webblog.pojo" targetProject="G:\h\src">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 映射文件生成的位置 -->
+		<sqlMapGenerator
+			targetPackage="org.dengyu.blog.webblog.mapper"
+			targetProject="G:\h\src">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+
+		<!--mapper接口的生成位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="org.dengyu.blog.webblog.mapper"
+			targetProject="G:\h\src">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!--tableName是表名 domainObjectName是领域对象名 -->
+		<table schema="" tableName="about_blog"
+			domainObjectName="AboutBlog"></table>
+		<table schema="" tableName="ad" domainObjectName="Ad"></table>
+		<table schema="" tableName="article" domainObjectName="Article"></table>
+		<table schema="" tableName="article_sort"
+			domainObjectName="ArticleSort"></table>
+		<table schema="" tableName="friend" domainObjectName="Friend"></table>
+		<table schema="" tableName="friendly_link"
+			domainObjectName="FriendlyLink"></table>
+		<table schema="" tableName="phone_message"
+			domainObjectName="PhoneMessage"></table>
+		<table schema="" tableName="photo_sort"
+			domainObjectName="PhotoSort"></table>
+		<table schema="" tableName="photos" domainObjectName="Photos"></table>
+		<table schema="" tableName="power_list"
+			domainObjectName="PowerList"></table>
+		<table schema="" tableName="secret_message"
+			domainObjectName="SecretMessage"></table>
+		<table schema="" tableName="shuoshuo"
+			domainObjectName="ShuoShuo"></table>
+		<table schema="" tableName="stay_message"
+			domainObjectName="StayMessage"></table>
+		<table schema="" tableName="system_message"
+			domainObjectName="SystemMessage"></table>
+		<table schema="" tableName="user" domainObjectName="User"></table>
+		<table schema="" tableName="user_attention"
+			domainObjectName="UserAttention"></table>
+		<table schema="" tableName="user_comment"
+			domainObjectName="UserComment"></table>
+		<table schema="" tableName="user_group"
+			domainObjectName="UserGroup"></table>
+		<table schema="" tableName="user_rank"
+			domainObjectName="UserRank"></table>
+		<table schema="" tableName="visitor" domainObjectName="Visitor"></table>
+	</context>
+
+</generatorConfiguration>

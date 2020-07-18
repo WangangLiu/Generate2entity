@@ -1,0 +1,45 @@
+<!DOCTYPE generatorConfiguration      
+      PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"      
+      "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> 
+<generatorConfiguration>
+	<!-- oracle的jar包文件路径 -->  
+    <!--<classPathEntry  location="ojdbc6-11.2.0.1.0.jar"/> -->
+    <context id="DB2Tables"  targetRuntime="MyBatis3"> 
+	
+        <commentGenerator type="startrun.MyCommentGenerator">
+			<property name="javaFileEncoding" value="UTF-8"/>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 --> 
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+	    </commentGenerator>  
+		
+		<!-- 链接配置 -->   
+        <jdbcConnection driverClass="oracle.jdbc.OracleDriver" 
+        connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="root" password="root">    
+        </jdbcConnection>  
+		
+		<javaTypeResolver>  
+        <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->  
+           <property name="forceBigDecimals" value="false"/>    
+       </javaTypeResolver> 
+	   
+	   <javaModelGenerator targetPackage="model" targetProject="D:\oldProject\Generate2entity\src\main\java">  
+        <!-- 是否在当前路径下新加一层schema,eg：fase路径cn.bdqn.mybatis， true:cn.bdqn.mybatis.[schemaName] -->  
+           <property name="enableSubPackages" value="false"/>  
+        <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->  
+           <property name="trimStrings" value="false"/>    
+       </javaModelGenerator>
+	   
+	   <sqlMapGenerator targetPackage="xml" targetProject="D:\oldProject\Generate2entity\src\main\resources\mapperxml">    
+          <property name="enableSubPackages" value="true"/>    
+      </sqlMapGenerator> 
+      
+      <!--mapper接口的生成位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="mapper" targetProject="D:\oldProject\Generate2entity\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+	  
+	  <table tableName="Student" domainObjectName="Student" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+	  </context> 
+</generatorConfiguration>
