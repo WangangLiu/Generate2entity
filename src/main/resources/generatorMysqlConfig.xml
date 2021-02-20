@@ -36,7 +36,7 @@
 
 		<!--tableName是表名 domainObjectName是领域对象名 -->
 		<!-- <table schema="" tableName="t_sysuser" domainObjectName="SysUser"></table> -->
-		<table schema="" tableName="sys_position" domainObjectName="SysPosition"></table>
+		<table schema="" tableName="friend" domainObjectName="Friend"></table>
 
 	</context>
 
