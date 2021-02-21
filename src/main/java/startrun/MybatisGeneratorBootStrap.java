@@ -1,15 +1,15 @@
 package startrun;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.api.ProgressCallback;
 import org.mybatis.generator.api.VerboseProgressCallback;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MybatisGeneratorBootStrap {
 	
@@ -32,10 +32,10 @@ public class MybatisGeneratorBootStrap {
 		ProgressCallback progressCallback = new VerboseProgressCallback();
 
 		myBatisGenerator.generate(progressCallback);
-		
+
 		for (String warning : warnings) {
 			System.out.println(warning);
 		}
-
+		System.out.println("执行完毕。。。。");
 	}
 }
