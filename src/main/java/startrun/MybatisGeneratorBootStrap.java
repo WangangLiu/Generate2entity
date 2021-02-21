@@ -17,6 +17,7 @@ public class MybatisGeneratorBootStrap {
 
 		List<String> warnings = new ArrayList<String>();
 
+		// 注释
 		String configFilePath = System.getProperty("user.dir").concat("/src/main/resources/")
 				.concat("/generatorMysqlConfig.xml");
 //				.concat("/generatorSqlserverConfig.xml");
