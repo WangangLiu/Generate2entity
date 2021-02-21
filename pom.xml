@@ -32,17 +32,17 @@
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.20</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
-		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc6</artifactId>
-		    <version>11.2.0.4</version>
-		</dependency>
-		<!-- 我是测试来的 -->
+
+	  <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+	  <dependency>
+		  <groupId>com.oracle.database.jdbc</groupId>
+		  <artifactId>ojdbc6</artifactId>
+		  <version>11.2.0.4</version>
+	  </dependency>
+	  <!-- 我是测试来的 -->
 
 	  <!-- 33333333 -->
-	  <!-- win10 上更改 上传 -->
+	  <!-- win10 上更改 上传的 -->
 
 
   </dependencies>
